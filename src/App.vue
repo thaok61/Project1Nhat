@@ -18,7 +18,7 @@
 
 <script>
 import Login from './components/Login';
-import Home from './components/book/Home'
+import Home from './components/Home'
 export default {
   name: 'App',
 

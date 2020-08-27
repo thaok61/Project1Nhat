@@ -2,7 +2,7 @@
 
   <div class="main">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" @click="current= 'Home'">Home</a>
+  <a class="navbar-brand" @click="current= 'ListBooks'">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -50,12 +50,13 @@
 </template>
 
 <script lang="js">
-import ChangeBook from '../book/ChangeBook'
-import ShowBook from '../book/ShowBook'
-import ChangeCategory from '../category/ChangeCategory'
-import ShowCategory from '../category/ShowCategory'
-import ChangeOrder from '../order/ChangeOrder'
-import ShowOrder from '../order/ShowOrder'
+import ListBooks from './book/ListBooks'
+import ChangeBook from './book/ChangeBook'
+import ShowBook from './book/ShowBook'
+import ChangeCategory from './category/ChangeCategory'
+import ShowCategory from './category/ShowCategory'
+import ChangeOrder from './order/ChangeOrder'
+import ShowOrder from './order/ShowOrder'
 
   export default  {
     name: 'home',
@@ -66,26 +67,28 @@ import ShowOrder from '../order/ShowOrder'
       ChangeOrder,
       ShowCategory,
       ShowBook,
-      ShowOrder
+      ShowOrder,
+      ListBooks
     },
     mounted () {
 
     },
     data () {
       return {
-        current: "ChangeCategory",
+        current: "ListBooks",
         idCategory: null,
         idBook: null,
         idOrder: null,
       }
     },
     methods: {
-      onClickChild (component, idCategory, idBook, idOrder) {
+      onClickChild (component, idCategory, idBook, idOrder, idOrderAdd) {
       console.log(component) // someValue
       this.current = component
       this.idCategory = idCategory
       this.idBook = idBook
       this.idOrder = idOrder
+      this.idOrderAdd = idOrderAdd
       }
     },
     computed: {
@@ -125,9 +128,8 @@ import ShowOrder from '../order/ShowOrder'
   color: #f1f1f1;
 }
 .main {
-  margin-left: 100px; /* Same as the width of the sidebar */
+  margin-left: 160px; /* Same as the width of the sidebar */
   padding: 0px 10px;
-  margin-top: 10px;
   margin-right: 100px;
 }
 </style>

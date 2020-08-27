@@ -65,6 +65,7 @@
         { text: 'ID Book', value: 'idBook' },
         {text: 'Name Of Book', value: 'nameBook'},
         { text: 'Date', value: 'date' },
+        { text: 'Quantity', value: 'quantity'},
         { text: 'Is Return Book', value: 'isReturnBook' },
         { text: 'Days', value: 'days', sortable: false },
         { text: 'Return Book', value: 'returnBook', sortable: false}

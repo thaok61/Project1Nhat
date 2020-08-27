@@ -43,6 +43,7 @@
       ></v-text-field>
 
       <v-text-field
+        type=number
         v-model="quantity"
         :rules="quantityRules"
         label="Quantity"
